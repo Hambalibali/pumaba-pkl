@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Edit | Jurusan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    {{-- FONT AWESOME --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
         body {
-            background-color: #80BCBD;
+            background-color: #f3f4f6;
         }
 
         .container {
@@ -48,12 +49,16 @@
             background-color: #0056b3;
             border-color: #0056b3;
         }
+
+        .icon {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <a href="{{ route('jurusan.index') }}" class="btn btn-back mb-3"><i class="fas fa-arrow-left"></i> Kembali</a>
+        <a href="{{ route('jurusan.index') }}" class="btn btn-back mb-3"><i class="ri-arrow-left-line icon"></i> Kembali</a>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -67,7 +72,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title mb-0 text-center" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Edit Jurusan</h3>
+                <h3 class="card-title mb-0 text-center"><i class="ri-edit-line icon"></i> Edit Jurusan</h3>
             </div>
             <div class="card-body">
                 <form action="{{ route('jurusan.update', $jurusan->id) }}" method="POST">
@@ -75,21 +80,21 @@
                     @method('patch')
                     
                     <div class="mb-3">
-                        <label for="nama_jurusan" class="form-label">Nama Jurusan</label>
+                        <label for="nama_jurusan" class="form-label"> Nama Jurusan</label>
                         <input type="text" class="form-control" id="nama_jurusan" name="nama_jurusan" value="{{ $jurusan->nama_jurusan }}" required>
                     </div>
                     
                     <div class="mb-3">
-                        <label for="singkatan" class="form-label">Singkatan</label>
+                        <label for="singkatan" class="form-label"> Singkatan</label>
                         <input type="text" class="form-control" id="singkatan" name="singkatan" value="{{ $jurusan->singkatan }}" required>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> Simpan Perubahan</button>
+                    <button type="submit" class="btn btn-primary"><i class="ri-save-line icon"></i> Simpan Perubahan</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
