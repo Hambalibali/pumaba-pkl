@@ -43,6 +43,12 @@
                     <label for="name" class="form-label">Nama Anda</label>
                     <input type="text" name="name" class="form-control">
                 </div>
+
+                <div class="mb3 text-white">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+
                 <div class="mb3 text-white">
                     <label for="email" name="email" class="form-label">Alamat Email</label>
                     <input type="email" name="email" class="form-control">

@@ -110,9 +110,9 @@
         <form action="/sesi/login" method="POST" class="login-form">
             @csrf
             <div class="mb-3">
-                <label for="email" class="form-label" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><i class="fas fa-envelope"></i> Alamat Email</label>
+                <label for="username" class="form-label" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><i class="fas fa-envelope"></i>Username</label>
                 <div class="input-group">
-                    <input type="email" name="email" class="form-control form-input" required>
+                    <input type="username" name="username" class="form-control form-input" required>
                 </div>
             </div>
             <div class="mb-3">
