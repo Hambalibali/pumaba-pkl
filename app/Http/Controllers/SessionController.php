@@ -17,22 +17,27 @@ class SessionController extends Controller
     
     function login(Request $request)
     {
-        //Validasi Data
-        $infologin = $request->validate([
-            'username' => 'required',
-            'password' => 'required'
-        ], [
-            'username.required' => 'Username wajib diisi',            
-            'password.required' => 'Password wajib diisi',
-        ]);
+        $logintype = filter_var($request->input('email_or_username'), FILTER_VALIDATE_EMAIL)? 'email' : 'username';
 
-        //Melakukan otentikasi menggunakan metode (auth::attemp) dengan memberikan kredensial yg valid
+        $request->validate([
+            'email_or_username' => 'required|string|max:255',
+            'password' => 'required|string|min:6',
+        ]);
+    
+        $infologin = [
+            $logintype =>$request->input('email_or_username'),
+            'password' => $request->input('password')
+        ];
+    
+            // dd($infologin);
         if(Auth::attempt($infologin)){
-            //Jika otentikasi berhasil maka,akan dialihkan ke halaman siswa
+            
+            $request->session()->regenerateToken();
+
             return redirect('siswa')->with('success','Berhasil Login');
         }
             // Jika Otentikasi gagal maka,akan dialihkan ke form login dengan pesan eror 
-            return back()->withErrors('Username dan Password yang anda masukan tidak valid');
+            return back()->with('erorr', 'Password yang anda masukan tidak valid');
     }
     function register()
     {
