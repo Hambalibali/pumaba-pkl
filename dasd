@@ -1,0 +1,55 @@
+[33mcommit 1e4883fad7a51fb68177b67abeb0eae07c37f2b2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: fann <kontkasep@gmail.com>
+Date:   Wed Feb 21 09:57:02 2024 +0700
+
+    mengubah tampilan
+
+[33mcommit e4ffdd33cb6dfa8f6e67dd3749bf16d0e5cbadca[m
+Merge: 8833d83 89e30b8
+Author: fann <kontkasep@gmail.com>
+Date:   Tue Feb 20 11:27:41 2024 +0700
+
+    Merge branch 'master' of https://github.com/Hambalibali/pumaba-pkl
+
+[33mcommit 8833d83e0fb11e00e4223e33eb3955811c38a5c9[m
+Author: fann <kontkasep@gmail.com>
+Date:   Tue Feb 20 11:23:21 2024 +0700
+
+    mengubah email
+
+[33mcommit 89e30b85282201e670aa23123df2a4487a16d19e[m
+Author: Hambalibali <imamhambali.0805@gmail.com>
+Date:   Tue Feb 20 01:23:26 2024 +0700
+
+    chore
+
+[33mcommit 48eeb40bc0fe0d7887b0545bd31fdb90c74caa10[m
+Merge: bb18f8d d0f3453
+Author: fann <kontkasep@gmail.com>
+Date:   Tue Feb 20 00:25:49 2024 +0700
+
+    Merge branch 'master' of https://github.com/Hambalibali/pumaba-pkl
+
+[33mcommit bb18f8d0233c092dab140554a76d1d10966c951f[m
+Author: fann <kontkasep@gmail.com>
+Date:   Tue Feb 20 00:12:09 2024 +0700
+
+    menambahkan file
+
+[33mcommit 33a9d3d5530a88db6bcb9408d56d159483133619[m
+Author: waaaaalll <walllpmb@gmail.com>
+Date:   Mon Feb 19 22:38:29 2024 -0800
+
+    Menambah projek CRUD
+
+[33mcommit d0f34532a1d19e17b381a59c091da707461cacc2[m
+Author: Hambalibali <imamhambali.0805@gmail.com>
+Date:   Tue Feb 20 00:08:09 2024 +0700
+
+    menghapus file
+
+[33mcommit 06fe2cdc42c3e175b000fca20d6dee63cbfb6e36[m
+Author: Hambalibali <imamhambali.0805@gmail.com>
+Date:   Tue Feb 20 00:04:57 2024 +0700
+
+    menambahkan file
