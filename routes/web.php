@@ -21,41 +21,41 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::resource('jurusan',JurusanController::class);
-// Route::resource('siswa',SiswaController::class);
-
-// Route::get('/sesi',[SessionController::class, 'index']);
-// Route::post('/sesi/login',[SessionController::class, 'login']);
-// Route::get('/sesi/logout',[SessionController::class, 'logout']);
-// Route::get('/sesi/register',[SessionController::class, 'register']);
-// Route::post('/sesi/create',[SessionController::class, 'create']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Route::middleware(['sesi'])->group(function (){
 Route::resource('jurusan',JurusanController::class);
 Route::resource('siswa',SiswaController::class);
-Route::get('/sesi/logout',[SessionController::class, 'logout'])->name('logout');
-// Route::resource('session',SessionController::class);
-});
 
-
-Route::middleware(['guest'])->group(function () { 
-    Route::get('/sesi',[SessionController::class, 'index'])->name('login');
-    Route::get('/sesi/register',[SessionController::class, 'register']);
-});
-
+Route::get('/sesi',[SessionController::class, 'index']);
 Route::post('/sesi/login',[SessionController::class, 'login']);
+Route::get('/sesi/logout',[SessionController::class, 'logout']);
+Route::get('/sesi/register',[SessionController::class, 'register']);
 Route::post('/sesi/create',[SessionController::class, 'create']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Route::middleware(['sesi'])->group(function (){
+// Route::resource('jurusan',JurusanController::class);
+// Route::resource('siswa',SiswaController::class);
+// Route::get('/sesi/logout',[SessionController::class, 'logout'])->name('logout');
+// // Route::resource('session',SessionController::class);
+// });
+
+
+// Route::middleware(['guest'])->group(function () { 
+//     Route::get('/sesi',[SessionController::class, 'index'])->name('login');
+//     Route::get('/sesi/register',[SessionController::class, 'register']);
+// });
+
+// Route::post('/sesi/login',[SessionController::class, 'login']);
+// Route::post('/sesi/create',[SessionController::class, 'create']);
